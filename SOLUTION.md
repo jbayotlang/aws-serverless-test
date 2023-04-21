@@ -22,7 +22,7 @@ way to ensure separation of concerns and promote maintainability. The main compo
 - `services`: Contains the business logic and external service interactions
 - `utils`: Contains utility functions and classes used throughout the project
 
-I've also added a basic set of test to ensure certain business rules are working.
+I've also added a basic set of test to ensure certain business rules are working. (Please do note that I haven't deployed this app using Serverless Framework)
 
 If given more time, the following improvements could be made to the solution:
 1. **Caching**: Implement a more robust logging system to facilitate easier debugging and monitoring.
