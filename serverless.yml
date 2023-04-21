@@ -1,5 +1,5 @@
-service: serverless-test
-frameworkVersion: "2"
+service: serverless-open-weather-test
+frameworkVersion: "3"
 useDotenv: true
 
 provider:
@@ -11,7 +11,10 @@ provider:
   timeout: 900
   environment:
     ALLOWS_INSECURE_SSL_CERTIFICATES: true
-
+    OPEN_WEATHER_API_KEY: 'PLEASE-UPDATE-ME'
+  apiGateway:
+    apiKeys:
+      - bilueExam
 
 plugins:
   - serverless-plugin-typescript
@@ -21,4 +24,8 @@ plugins:
 functions:
   weatherApi:
     handler: src/handlers/weather.handler
-    
+    events:
+      - http:
+          path: weather
+          method: get
+          private: true
